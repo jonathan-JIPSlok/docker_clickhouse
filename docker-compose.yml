@@ -1,6 +1,6 @@
 services:
   postgress:
-    image: postgres:latest
+    image: postgres:17.11
     container_name: postgres
     environment:
       POSGRES_USER: user
@@ -12,7 +12,7 @@ services:
       - pgdata:/var/lib/postgresql/data
   
   clickhouse:
-    image: clickhouse/clickhouse-server:latest
+    image: clickhouse/clickhouse-server:26.3
     container_name: clickhouse
     environment:
       CLICKHOUSE_USER: user
